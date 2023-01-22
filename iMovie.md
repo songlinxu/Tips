@@ -17,6 +17,6 @@ Here are the steps:
 - Gradient Black
 - Reveal Lower Third
 
-Note: except for Ticker, you could not set the font size of other templates. This may result in different font size in different sentences of your video.
+Note: except for Ticker and Reveal Lower Third, you could not set the font size of other templates. This may result in different font size in different sentences of your video.
 
 
