@@ -1,4 +1,4 @@
-# What if your video could not be exported to 1080p (only 720p)?
+# What if your video could not be exported to 1080p (only 720p) in iMovie?
 
 Here are the steps:
 
