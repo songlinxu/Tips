@@ -6,6 +6,9 @@
 
 
 
+# Serial Communication Issue
 
+- Always check the exact output of serial: you could use Serial.print("\[")
+- Use Serial.println for multiple times may results in unexpected output
 
 
