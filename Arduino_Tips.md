@@ -8,7 +8,7 @@
 
 # Serial Communication Issue
 
-- Always check the exact output of serial: you could use Serial.print("\["); Serial.print(receivedCommand); Serial.print("\]\n"). Then you will realize that the received value: receivedCommand is not a simple string. Instead, it is sth like "\nreceivedCommand\r\n" You need to remove the head and tail. 
+- Always check the exact output of serial: you could use Serial.print("\["); Serial.print(receivedCommand); Serial.print("\]\n"). Then you will realize that the received value: receivedCommand is not a simple string. Instead, it may be sth like "\nreceivedCommand\r\n". You need to remove the head and tail. The head "\n" comes from the enter action when you are sending the command in the serial portal. 
 - Use Serial.println for multiple times may results in unexpected output
 
 
