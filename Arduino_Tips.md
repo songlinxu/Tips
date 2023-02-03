@@ -8,7 +8,7 @@
 
 # Serial Communication Issue
 
-- Always check the exact output of serial: you could use Serial.print("\[")
+- Always check the exact output of serial: you could use Serial.print("\["); Serial.print(receivedCommand); Serial.print("\]\n"). Then you will realize that the received value: receivedCommand is not a simple string. Instead, it is sth like "\nreceivedCommand\r\n" You need to remove the head and tail. 
 - Use Serial.println for multiple times may results in unexpected output
 
 
