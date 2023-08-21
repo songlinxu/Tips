@@ -13,7 +13,7 @@
 - In application.py, be sure to use application = Flask(__name__) instead of app = Flask(__name__).
 - Be sure to create a python.config file in the .ebextensions folder and write:
 ```
-  option_settings:
+option_settings:
   "aws:elasticbeanstalk:container:python":
     WSGIPath: application:application
 ```
