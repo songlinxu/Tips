@@ -12,10 +12,11 @@
 - On MacOS, when you upload your code zipped folder, you have to first remove the ".DS_Store" file before uploading. You could use this command: zip -vr application.zip ./ -x "*.DS_Store"
 - In application.py, be sure to use application = Flask(__name__) instead of app = Flask(__name__).
 - Be sure to create a python.config file in the .ebextensions folder and write:
+```
   option_settings:
   "aws:elasticbeanstalk:container:python":
     WSGIPath: application:application
-
+```
 
 
 
