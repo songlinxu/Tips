@@ -28,3 +28,7 @@ option_settings:
 3. https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html
 4. https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html
 
+## Clear
+To see how to completely remove application versions, environments, and application, find it here:
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.Cleanup.html
