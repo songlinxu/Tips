@@ -1,5 +1,9 @@
 # This is a tutorial to deploy a python-based web application via Flask on AWS Elastic Beanstalk
 
+## Credential
+
+To add AWS credential in linux command, use "aws configure" command to add your access id and access key. You should not explicitly add your key and id in the code for privacy issues.
+
 ## Steps
 
 
