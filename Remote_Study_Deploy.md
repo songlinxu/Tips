@@ -13,7 +13,7 @@ To add AWS credential in linux command, use "aws configure" command to add your 
 
 ## Important Notes
 - Be sure to first visit all the references below before you get started.
-- It is better to use virtualenv to first create a virtual env
+- It is better to use virtualenv to first create a virtual env. In addition, make sure to have installed all libraries in your virtual env and test it locally in your device first.
 - Comment CORS in python codes for deployment
 - Do not forget to use pip freeze > requirements.txt to generate the requirements file.
 - If issues, try enabling the VPC.
