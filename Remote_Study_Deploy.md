@@ -13,6 +13,8 @@ To add AWS credential in linux command, use "aws configure" command to add your 
 
 ## Important Notes
 - Be sure to first visit all the references below before you get started.
+- It is better to use virtualenv to first create a virtual env
+- Comment CORS in python codes for deployment
 - Do not forget to use pip freeze > requirements.txt to generate the requirements file.
 - If issues, try enabling the VPC.
 - On MacOS, when you upload your code zipped folder, you have to first remove the ".DS_Store" file before uploading. You could use this command: zip -vr application.zip ./ -x "*.DS_Store"
