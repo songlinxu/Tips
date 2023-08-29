@@ -13,6 +13,8 @@ To add AWS credential in linux command, use "aws configure" command to add your 
 
 ## Important Notes
 - Be sure to first visit all the references below before you get started.
+- Do not forget to use pip freeze > requirements.txt to generate the requirements file.
+- If issues, try enabling the VPC.
 - On MacOS, when you upload your code zipped folder, you have to first remove the ".DS_Store" file before uploading. You could use this command: zip -vr application.zip ./ -x "*.DS_Store"
 - In application.py, be sure to use application = Flask(__name__) instead of app = Flask(__name__).
 - In real deployment, be sure to use application.run(debug=False) instead of (debug=True).
