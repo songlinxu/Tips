@@ -1,0 +1,6 @@
+- Open the file in VSCode.
+- Open the "Replace" feature by pressing Ctrl + H (or Cmd + H on Mac).
+- Click the .* button to enable regular expression mode.
+- In the "Find" box, enter ^ {4} to match exactly 4 spaces at the beginning of each line.
+- Leave the "Replace" box empty.
+- Click "Replace All".
