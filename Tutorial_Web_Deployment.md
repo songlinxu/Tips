@@ -5,6 +5,9 @@ Steps below:
 ```
 curl -k https://cogteach.com
 ```
+```
+kubectl describe managedcertificate helloweb-managed-cert
+```
 
 ```yaml
 apiVersion: networking.k8s.io/v1
