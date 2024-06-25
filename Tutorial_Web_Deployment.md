@@ -14,6 +14,11 @@ gcloud config set compute/region REGION
 gcloud container clusters get-credentials hello-cluster --region REGION
 gcloud auth configure-docker REGION-docker.pkg.dev
 
+gcloud artifacts repositories add-iam-policy-binding hello-repo \
+    --location=REGION \
+    --member=serviceAccount:PROJECT_NUMBER-compute@developer.gserviceaccount.com \
+    --role="roles/artifactregistry.reader"
+
 ```
 
 ```
