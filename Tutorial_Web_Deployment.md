@@ -2,15 +2,22 @@
 Steps below:
 - Create a web app in kubernetes and get an external IP: Follow the steps in https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app#cloud-shell_1
 - Go to Squarespace (your owned domain) DNS settings and click "add record" under custom records. For "Host", enter "@". For "Type", select "A". For "Data", enter your external ID address from kubernete. Save and done! You can know visit your domain name or check it using "host cogteach.com" in google cloud shell.
+
+## Important notes to check before EACH running commands in google cloud shell: 
+```
+Check if you have enabled the Compute Engine, Artifact Registry, and Google Kubernetes Engine APIs.
+export PROJECT_ID=PROJECT_ID
+gcloud config set project $PROJECT_ID
+gcloud container clusters get-credentials hello-cluster --region REGION
+```
+
 ```
 curl -k https://cogteach.com
 ```
 ```
 kubectl describe managedcertificate helloweb-managed-cert
 ```
-```
-gcloud container clusters get-credentials hello-cluster --region REGION
-```
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
