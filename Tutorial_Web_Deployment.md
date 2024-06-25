@@ -8,7 +8,9 @@ curl -k https://cogteach.com
 ```
 kubectl describe managedcertificate helloweb-managed-cert
 ```
-
+```
+gcloud container clusters get-credentials hello-cluster --region REGION
+```
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
