@@ -5,8 +5,8 @@ Steps below:
 
 ## Important notes to check before EACH running commands in google cloud shell: 
 **First, Check if you have enabled the Compute Engine, Artifact Registry, and Google Kubernetes Engine APIs.**
+**Second, MUST Check steps below before updating any new codes or deployments.**
 ```
-**You MUST Check steps below before updating any new codes or deployments.**
 export PROJECT_ID=PROJECT_ID
 gcloud config set project $PROJECT_ID
 gcloud config set compute/region REGION
