@@ -11,6 +11,7 @@ gcloud config set project $PROJECT_ID
 gcloud config set compute/region REGION
 gcloud container clusters get-credentials hello-cluster --region REGION
 gcloud auth configure-docker REGION-docker.pkg.dev
+
 ```
 
 ```
