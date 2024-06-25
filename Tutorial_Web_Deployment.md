@@ -4,9 +4,9 @@ Steps below:
 - Go to Squarespace (your owned domain) DNS settings and click "add record" under custom records. For "Host", enter "@". For "Type", select "A". For "Data", enter your external ID address from kubernete. Save and done! You can know visit your domain name or check it using "host cogteach.com" in google cloud shell.
 
 ## Important notes to check before EACH running commands in google cloud shell: 
-**First, Check if you have enabled the Compute Engine, Artifact Registry, and Google Kubernetes Engine APIs.**
+First, Check if you have **Enabled APIs** from the Compute Engine, Artifact Registry, and Google Kubernetes Engine.
 
-**Second, MUST Check steps below before updating any new codes or deployments.**
+Second, **MUST Check** steps below before updating any new codes or deployments.
 ```
 export PROJECT_ID=PROJECT_ID
 gcloud config set project $PROJECT_ID
