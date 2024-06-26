@@ -5,7 +5,19 @@ Steps below:
 - Note that you can either use Kubernete service or ingress to expose the app to the Internet. But we recommend you to use ingress because the service does not support https.
 - https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip
 - You can either use kubectl apply -f deploy.yaml or kubectl create deployment hello-app --image=REGION-docker.pkg.dev/${PROJECT_ID}/hello-repo/hello-app:v1. But we recommend you to use the deploy.yaml so that you can directly run it for each update. But be sure to change the version name 'v1' otherwise, your website may not update. The version name is also global even across different deployment name.
-- But be sure to build and push the image before deployment. 
+- But be sure to build and push the image before deployment.
+- You need to use manage-cert.yaml (codes below) to create the SSL certificate before using https. Note that it takes several hours before your certificate is active. Before that, your https://domain.com may not work. Do not forget to add your global IP into custom records in your domain provider. Also, if curl https://IP does not work, you can try curl domain.com.
+
+```
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: helloweb-managed-cert
+spec:
+  domains:
+    - cogteach.com
+
+```
   
 ## Important notes to check before EACH running commands in google cloud shell: 
 First, Check if you have **Enabled APIs** from the Compute Engine, Artifact Registry, and Google Kubernetes Engine.
