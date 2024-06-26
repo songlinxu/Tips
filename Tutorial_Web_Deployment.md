@@ -20,7 +20,12 @@ gcloud artifacts repositories add-iam-policy-binding hello-repo \
     --role="roles/artifactregistry.reader"
 
 ```
+```
+Be SURE to specify the region when you delete the repo
+gcloud artifacts repositories delete hello-repo \
+   --location=REGION
 
+```
 ```
 curl -k https://cogteach.com
 ```
