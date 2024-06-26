@@ -21,7 +21,7 @@ gcloud artifacts repositories add-iam-policy-binding hello-repo \
 
 ```
 ```
-Be SURE to specify the region when you delete the repo
+When there are errors, try to delete the repo. But **Be SURE** to specify the region when you delete the repo
 gcloud artifacts repositories delete hello-repo \
    --location=REGION
 
