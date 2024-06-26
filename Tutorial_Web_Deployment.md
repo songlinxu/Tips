@@ -28,7 +28,7 @@ curl -k https://cogteach.com
 kubectl describe managedcertificate helloweb-managed-cert
 ```
 
-Troubleshoot
+**Troubleshoot**
 - If you use ingress to add SSL certificate for https but gets the error "response 404 (backend NotFound), service rules for the path non-existent", maybe the reason is that you did not record your global IP address in the custom record section in your domain provider (squarespace)(Host: @, Type: A, Data: your global IP number).
 - After you add your custom record, if you find your website codes are not updated, maybe the reason is that...
 
