@@ -2,7 +2,11 @@
 Steps below:
 - Create a web app in kubernetes and get an external IP: Follow the steps in https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app#cloud-shell_1
 - Go to Squarespace (your owned domain) DNS settings and click "add record" under custom records. For "Host", enter "@". For "Type", select "A". For "Data", enter your external ID address from kubernete. Save and done! You can know visit your domain name or check it using "host cogteach.com" in google cloud shell.
-
+- Note that you can either use Kubernete service or ingress to expose the app to the Internet. But we recommend you to use ingress because the service does not support https.
+- https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip
+- You can either use kubectl apply -f deploy.yaml or kubectl create deployment hello-app --image=REGION-docker.pkg.dev/${PROJECT_ID}/hello-repo/hello-app:v1. But we recommend you to use the deploy.yaml so that you can directly run it for each update. But be sure to change the version name 'v1' otherwise, your website may not update. The version name is also global even across different deployment name.
+- But be sure to build and push the image before deployment. 
+  
 ## Important notes to check before EACH running commands in google cloud shell: 
 First, Check if you have **Enabled APIs** from the Compute Engine, Artifact Registry, and Google Kubernetes Engine.
 
