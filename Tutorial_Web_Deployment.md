@@ -36,7 +36,8 @@ kubectl describe managedcertificate helloweb-managed-cert
 **Troubleshoot**
 - If you use ingress to add SSL certificate for https but gets the error "response 404 (backend NotFound), service rules for the path non-existent", maybe the reason is that you did not record your global IP address in the custom record section in your domain provider (squarespace)(Host: @, Type: A, Data: your global IP number).
 - After you add your custom record, if you find your website codes are not updated, maybe the reason is that...
-
+- If you find that your **deployment does not update** in the website, it is very likely that your version name is the same as the previous version. Kubernete has one limitation that, if your version name is the same, then it will not deploy your new image because it thinks that you have not changed your image. For example, if your old version image is "us-east1-docker.pkg.dev/helloapp-427317/hello-repo/hello-app:v1", then even if you have changed your deployment name, you still need to change your version name from 'v1' to 'v2'. Otherwise, the kubernete still keeps the original version of 'v1' even if it is an very early image version from a different deployment name, but the version name is the same.
+- When you define both ingress and backend service, be sure to add "---" between them. Otherwise, the ingress will not update.
 
 ```yaml
 apiVersion: networking.k8s.io/v1
