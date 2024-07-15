@@ -10,7 +10,7 @@ set emailSubject to "Your Email Subject"
 set emailBody to "Your email body here."
 
 -- Read the CSV file
-set fileRef to open for access file filePath
+set fileRef to open for access file filePath with permission "r"
 set fileContent to read fileRef
 close access fileRef
 
@@ -32,9 +32,10 @@ end if
 tell application "Microsoft Outlook"
     set newMessage to make new outgoing message with properties {subject:emailSubject, content:emailBody}
     tell newMessage
-        make new recipient with properties {email address:{address:emailBCC}}
+        make new recipient at end of bcc recipients with properties {email address:{address:emailBCC}}
         send
     end tell
 end tell
+
 
 ```
