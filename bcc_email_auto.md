@@ -1,3 +1,10 @@
+## Method 1
+
+Open an excel file. Put all emails into a column. You can directly select and copy a whole column of emails to simply paste them into the bcc field in outlook.
+
+## Method 2
+
+
 - Open the Script Editor. You can find it using Spotlight Search (Cmd + Space) and typing Script Editor.
 - Create a New Script and input codes below.
 - Run the Script
